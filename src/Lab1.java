@@ -17,16 +17,20 @@ public class Lab1 {
 			System.out.println("Please Enter Height:");
 			double height = scnr.nextDouble();
 
-			// I made functions for code reusability
-			System.out.println("Area: " + calculateArea(width, length));
-			System.out.println("Perimeter: " + calculatePerimeter(width, length));
-			System.out.println("Volume:" + calculateVolume(width, length, height));
+			// I made functions for code reusability-- need to
+			System.out.println("Area: ");
+			System.out.printf("%.2f%n", calculateArea(width, length));
+			System.out.println("Perimeter:  ");
+			System.out.printf("%.2f%n", calculatePerimeter(width, length));
+			System.out.print("Volume:");
+			System.out.printf("%.2f%n", calculateVolume(width, length, height));
 
 			System.out.println("Would you like to continue: (y/n)");
 			// for some reason nextChar() is not a command
 			continueGame = (scnr.next()).charAt(0);
 
 		}
+		scnr.close();
 		System.out.println("Exiting now.");
 
 	}
