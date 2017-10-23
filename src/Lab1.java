@@ -14,17 +14,20 @@ public class Lab1 {
 			double length = scnr.nextDouble();
 			System.out.println("Please Enter Width:");
 			double width = scnr.nextDouble();
+			System.out.println("Please Enter Height:");
+			double height = scnr.nextDouble();
 
 			// I made functions for code reusability
 			System.out.println("Area: " + calculateArea(width, length));
 			System.out.println("Perimeter: " + calculatePerimeter(width, length));
+			System.out.println("Volume:" + calculateVolume(width, length, height));
 
 			System.out.println("Would you like to continue: (y/n)");
 			// for some reason nextChar() is not a command
 			continueGame = (scnr.next()).charAt(0);
 
 		}
-		System.out.println("Thanks!");
+		System.out.println("Exiting now.");
 
 	}
 
@@ -40,4 +43,9 @@ public class Lab1 {
 		return perimeter;
 	}
 
+	public static double calculateVolume(double width, double length, double height) {
+		double volume = width * length * height;
+
+		return volume;
+	}
 }
